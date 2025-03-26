@@ -1,41 +1,63 @@
-<!-- Estrutura básica do HTML -->
+<!-- Estrutura básica do HTML com doctype, head e body -->
 html:5
 
-<!-- Criar uma div com uma classe -->
+<!-- Criar uma div com uma classe chamada 'div-container' -->
 .div-container
 
-<!-- Criar uma div com um ID -->
+<!-- Criar uma div com um ID chamado 'main-content' -->
 #main-content
 
-<!-- Criar uma tag com múltiplas classes -->
+<!-- Criar um elemento <span> com três classes: 'text', 'bold' e 'italic' -->
 span.text.bold.italic
 
-<!-- Criar uma div com ID e classe -->
+<!-- Criar uma div com ID 'unique-box' e classe 'special' -->
 div#unique-box.special
 
-<!-- Criar múltiplos elementos -->
+<!-- Criar uma lista não ordenada (<ul>) com 5 itens (<li>) -->
 ul>li*5
 
-<!-- Criar um link -->
+<!-- Criar uma lista ordenada (<ol>) com 5 itens numerados 'Item 1', 'Item 2'... -->
+ol>li*5{Item $}
+
+<!-- Criar um link <a> apontando para 'https://example.com' -->
 a[href="https://example.com"]
 
-<!-- Criar uma imagem com alt -->
+<!-- Criar uma imagem <img> com o caminho 'image.jpg' e um texto alternativo -->
 img[src="image.jpg" alt="Descrição da imagem"]
 
-<!-- Criar um formulário básico -->
-form>input[type="text"]+input[type="password"]+button[type="submit"]{Enviar}
+<!-- Criar um formulário com campos de usuário e senha, e um botão de envio -->
+form>(label{Usuário}+input[type="text"])+(label{Senha}+input[type="password"])+(button[type="submit"]{Enviar})
 
-<!-- Criar uma tabela -->
-table>thead>tr>th*3{Cabeçalho $}+tbody>tr*3>td*3{Item $}
+<!-- Criar um formulário mais completo com campos obrigatórios de nome, email e mensagem -->
+form>(label{Nome}+input[type="text" required])+(label{Email}+input[type="email"
+required])+(label{Mensagem}+textarea[rows="4"])+(button[type="submit"]{Enviar})
 
-<!-- Criar um parágrafo com texto dentro -->
+<!-- Criar um <select> com três opções -->
+select>(option[value="1"]{Opção 1})+(option[value="2"]{Opção 2})+(option[value="3"]{Opção 3})
+
+<!-- Criar uma tabela com cabeçalho e três linhas de corpo -->
+table>(thead>tr>(th*3{Cabeçalho $}))+(tbody>tr*3>(td*3{Item $}))
+
+<!-- Criar um parágrafo com um texto dentro -->
 p{Este é um texto de exemplo}
 
-<!-- Criar uma seção com um título e parágrafo -->
-section#section-info>h2{Título da Seção}+p{Texto da seção aqui.}
+<!-- Criar uma seção (<section>) com um ID 'section-info', um título e um parágrafo -->
+section#section-info>(h2{Título da Seção})+(p{Texto da seção aqui.})
 
-<!-- Criar um card com imagem, título e descrição -->
-div.card#card-item>img[src="image.jpg"]+h3{Título do Card}+p{Descrição do card.}
+<!-- Criar um card (<div>) com classe 'card', ID 'card-item', imagem, título e descrição -->
+div.card#card-item>(img[src="image.jpg"])+(h3{Título do Card})+(p{Descrição do card.})
 
-<!-- Criar um botão com ID -->
+<!-- Criar um botão <button> com ID 'btn-submit' e texto 'Enviar' -->
 button#btn-submit{Enviar}
+
+<!-- Criar um cabeçalho (<header>) com um menu de navegação -->
+header>(nav>ul>li*3>(a[href="#"]{Menu $}))
+
+<!-- Criar um rodapé (<footer>) com um texto de direitos autorais -->
+footer>(p{© 2024 Todos os direitos reservados})
+
+<!-- Criar um artigo (<article>) com um título e um parágrafo -->
+article>(h2{Título do Artigo})+(p{Conteúdo do artigo aqui...})
+
+<!-- Criar um botão desativado -->
+button[disabled]{Indisponível}
