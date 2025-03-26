@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Referência de Emmet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      background: #007bff;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    code {
+      font-family: Consolas, monospace;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Referência de Emmet</h1>
+
+    <h2>Estrutura básica do HTML</h2>
+    <pre><code>html:5 ou apenas !</code></pre>
+
+    <h2>Divs e Identificadores</h2>
+    <pre><code>.div-container
+#main-content
+div#unique-box.special</code></pre>
+
+    <h2>Textos e Elementos Inline</h2>
+    <pre><code>span.text.bold.italic
+p{Este é um texto de exemplo}</code></pre>
+
+    <h2>Listas (Ordenadas e Não Ordenadas)</h2>
+    <pre><code>ul>li*5
+ol>li*5{Item $}</code></pre>
+
+    <h2>Links e Imagens</h2>
+    <pre><code>a[href="https://example.com" target="_blank"]
+img[src="image.jpg" alt="Descrição da imagem"]</code></pre>
+
+    <h2>Formulários Simples</h2>
+    <pre><code>form>(label{Usuário}+input:text)+(label{Senha}+input:password)+(button[type="submit"]{Enviar})</code></pre>
+
+    <h2>Formulários Mais Completos</h2>
+    <pre><code>form>(label{Nome}+input:text[required])+(label{Email}+input:email[required])+(label{Mensagem}+textarea[rows="4"])+(button[type="submit"]{Enviar})</code></pre>
+
+    <h2>Select e Opções</h2>
+    <pre><code>select>(option[value="1"]{Opção 1})+(option[value="2"]{Opção 2})+(option[value="3"]{Opção 3})
+select>option*5</code></pre>
+
+    <h2>Tabelas</h2>
+    <pre><code>table>(thead>tr>(th*3{Cabeçalho $}))+(tbody>tr*3>(td*3{Item $}))</code></pre>
+
+    <h2>Seções e Estruturas de Conteúdo</h2>
+    <pre><code>section#section-info>(h2{Título da Seção})+(p{Texto da seção aqui.})
+article>(h2{Título do Artigo})+(p{Conteúdo do artigo aqui...})</code></pre>
+
+    <h2>Cards e Elementos Visuais</h2>
+    <pre><code>div.card#card-item>(img[src="image.jpg"])+(h3{Título do Card})+(p{Descrição do card.})</code></pre>
+
+    <h2>Botões</h2>
+    <pre><code>button#btn-submit{Enviar}
+button[disabled]{Indisponível}</code></pre>
+
+    <h2>Cabeçalhos e Rodapés</h2>
+    <pre><code>header>(nav>ul>li*3>(a[href="#"]{Menu $}))
+footer>(p{© 2024 Todos os direitos reservados})</code></pre>
+
+    <h2>Inputs Avançados</h2>
+    <pre><code>input:email[required placeholder="Digite seu email"]
+input:number[min="1" max="100"]
+input:password[required minlength="6" maxlength="12"]
+input:tel[placeholder="(99) 99999-9999"]
+input:search[placeholder="Buscar..."]</code></pre>
+
+    <h2>Checkbox e Rádio com Rótulo</h2>
+    <pre><code>label>(input:checkbox)+{Aceito os termos}
+label>(input:radio[name="genero" value="masculino"])+{Masculino}
+label>(input:radio[name="genero" value="feminino"])+{Feminino}</code></pre>
+
+    <h2>Inputs Diferenciados</h2>
+    <pre><code>input:file
+input:color
+input:range[min="0" max="100" step="10"]
+input:time
+input:month
+input:week</code></pre>
+
+    <h2>Geradores de Texto (Lorem Ipsum)</h2>
+    <pre><code>lorem
+lorem*5
+ul.mylist>lorem.item*5</code></pre>
+
+    <h2>Uso de $ (Marcador de Número Dinâmico)</h2>
+    <pre><code>ul>li{Item $}*5
+h${Header $}*5
+div#container>div.item$*5</code></pre>
+
+    <h2>Dicas Finais e Truques</h2>
+    <pre><code>div.container>(h2{Título})+(p{Texto explicativo})+(button{Clique Aqui})
+input:text[placeholder="Digite algo" required]
+nav>ul>li*3>a{Menu $}
+header>(nav>ul>li*4>a{Link $})+main>section*2>h2{Seção $}+p{Descrição...}+footer>p{Rodapé}</code></pre>
+  </div>
+</body>
+
+</html>
+
+
+<h2>Estrutura básica do HTML</h2>
+<!-- Estrutura básica do HTML com DOCTYPE, head e body -->
+html:5 ou apenas !
+<br>
+
+<h2>Divs e Identificadores</h2>
+<!-- Criar uma div com uma classe -->
+.div-container
+<!-- Criar uma div com um ID -->
+#main-content
+<!-- Criar uma div com ID e Classe -->
+div#unique-box.special
+<br>
+
+<h2>Textos e Elementos Inline</h2>
+<!-- Criar um <span> com três classes -->
+span.text.bold.italic
+<!-- Criar um parágrafo com um texto dentro -->
+p{Este é um texto de exemplo}
+<br>
+
+<h2>Listas (Ordenadas e Não Ordenadas)</h2>
+<!-- Lista não ordenada (<ul>) com 5 itens -->
+ul>li*5
+<!-- Lista ordenada (<ol>) com 5 itens numerados 'Item 1', 'Item 2'... -->
+ol>li*5{Item $}
+
+<h2>Links e Imagens</h2>
+<!-- Criar um link <a> apontando para um site externo -->
+a[href="https://example.com" target="_blank"]
+<!-- Criar uma imagem <img> com o caminho 'image.jpg' e um texto alternativo -->
+img[src="image.jpg" alt="Descrição da imagem"]
+<br>
+
+<h2>Formulários Simples</h2>
+<!-- Criar um formulário com campos de usuário e senha, e um botão de envio -->
+form>(label{Usuário}+input:text)+(label{Senha}+input:password)+(button[type="submit"]{Enviar})
+
+
+<h1>Intermediário (Componentes Estruturais e Avançados)</h1>
+
+<h2>Formulários Mais Completos</h2>
+<!-- Criar um formulário com nome, email e mensagem obrigatórios -->
+form>(label{Nome}+input:text[required])+(label{Email}+input:email[required])+(label{Mensagem}+textarea[rows="4"])+(button[type="submit"]{Enviar})
+
+<h2>Select e Opções</h2>
+<!-- Criar um <select> com três opções -->
+select>(option[value="1"]{Opção 1})+(option[value="2"]{Opção 2})+(option[value="3"]{Opção 3})
+<!-- Criar um <select> com 5 opções -->
+select>option*5
+
+<h2>Tabelas</h2>
+<!-- Criar uma tabela com cabeçalho e três linhas de corpo -->
+table>(thead>tr>(th*3{Cabeçalho $}))+(tbody>tr*3>(td*3{Item $}))
+
+<h2>Seções e Estruturas de Conteúdo</h2>
+<!-- Criar uma seção (<section>) com ID, título e parágrafo -->
+section#section-info>(h2{Título da Seção})+(p{Texto da seção aqui.})
+<!-- Criar um artigo (<article>) com título e parágrafo -->
+article>(h2{Título do Artigo})+(p{Conteúdo do artigo aqui...})
+
+<h2>Cards e Elementos Visuais</h2>
+<!-- Criar um card (<div>) com imagem, título e descrição -->
+div.card#card-item>(img[src="image.jpg"])+(h3{Título do Card})+(p{Descrição do card.})
+
+<h2>Botões</h2>
+<!-- Criar um botão com ID -->
+button#btn-submit{Enviar}
+<!-- Criar um botão desativado -->
+button[disabled]{Indisponível}
+<br>
+
+<h2>Cabeçalhos e Rodapés</h2>
+<!-- Criar um cabeçalho (<header>) com menu de navegação -->
+header>(nav>ul>li*3>(a[href="#"]{Menu $}))
+<!-- Criar um rodapé (<footer>) com direitos autorais -->
+footer>(p{© 2024 Todos os direitos reservados})
+<br>
+
+<h1>Avançado (Elementos Dinâmicos e Expressões Poderosas)</h1>
+
+<h2>Inputs Avançados</h2>
+<!-- Input de email obrigatório -->
+input:email[required placeholder="Digite seu email"]
+<!-- Input de número com intervalo mínimo e máximo -->
+input:number[min="1" max="100"]
+<!-- Input de senha com regras de comprimento -->
+input:password[required minlength="6" maxlength="12"]
+<!-- Input de telefone formatado -->
+input:tel[placeholder="(99) 99999-9999"]
+<!-- Input de pesquisa -->
+input:search[placeholder="Buscar..."]
+<br>
+
+<h2>Checkbox e Rádio com Rótulo</h2>
+<!-- Input de checkbox com rótulo -->
+label>(input:checkbox)+{Aceito os termos}
+<br>
+
+<!-- Input de rádio com opções -->
+label>(input:radio[name="genero" value="masculino"])+{Masculino}
+label>(input:radio[name="genero" value="feminino"])+{Feminino}
+<br>
+
+<h2>Inputs Diferenciados</h2>
+<!-- Input de arquivo -->
+input:file
+<!-- Input de cor -->
+input:color
+<!-- Input de intervalo (range) -->
+input:range[min="0" max="100" step="10"]
+<!-- Input de tempo -->
+input:time
+<!-- Input de mês -->
+input:month
+<!-- Input de semana -->
+input:week
+<br>
+
+<h2>Geradores de Texto (Lorem Ipsum)</h2>
+<!-- Parágrafo de Lorem Ipsum -->
+lorem
+<!-- Criar 5 parágrafos -->
+lorem*5
+<!-- Criar uma lista com Lorem Ipsum -->
+ul.mylist>lorem.item*5
+<br>
+
+<h2>Uso de $ (Marcador de Número Dinâmico)</h2>
+<!-- Criar uma lista numerada -->
+ul>li{Item $}*5
+<!-- Criar cabeçalhos com números -->
+h${Header $}*5
+<!-- Criar uma estrutura repetida dentro de um container -->
+div#container>div.item$*5
+<br>
+
+<h2>Dicas Finais e Truques</h2>
+<p>1.Combine múltiplos elementos:
+  <span>div.container>(h2{Título})+(p{Texto explicativo})+(button{Clique Aqui})</span></p>
+
+<p>2.Adicionar atributos diretamente:
+  input:text[placeholder="Digite algo" required]</p>
+
+<p>3.Evite digitação repetitiva com Emmet:
+  nav>ul>li*3>a{Menu $}</p>
+
+<p>4.Mixando estruturas para layouts mais rápidos:
+  header>(nav>ul>li*4>a{Link $})+main>section*2>h2{Seção $}+p{Descrição...}+footer>p{Rodapé}</p>
